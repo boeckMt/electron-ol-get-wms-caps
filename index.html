@@ -1,13 +1,26 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+
+<head>
+  <title>Ol3-Ng2 WMS Capabilities</title>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/bundle.css">
+
+  <!-- ####################################################################  -->
+  <script src="scripts/node_modules.bundle.js"></script>
+
+  <!-- TODO bundle rest of scripts and css and fix error on template ts() -->
+
+</head>
+
+<body>
+
+  <wms-app></wms-app>
+
+  <!-- <script src="../dist/scripts/wms-app.bundle.js"></script> -->
+  <script src="scripts/wms-app.bundle.js"></script>
+
+</body>
+
 </html>
