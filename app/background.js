@@ -8,6 +8,10 @@ import { devMenuTemplate } from './helpers/dev_menu_template';
 import { editMenuTemplate } from './helpers/edit_menu_template';
 import createWindow from './helpers/window';
 
+//import express proxyserver function
+import {proxyServer} from './proxyserver/index';
+//const proxyServer = require('./proxyserver/index.js');
+
 // Special module holding environment variables which you declared
 // in config/env_xxx.json file.
 import env from './env';
@@ -30,7 +34,12 @@ app.on('ready', function () {
         height: 600
     });
 
-    mainWindow.loadURL('file://' + __dirname + '/app.html');
+    //start express server proxy
+  //console.log(process)
+    proxyServer.start(9005);
+
+    //mainWindow.loadURL('file://' + __dirname + '/app.html');
+    mainWindow.loadURL('file://' + __dirname + '/index.html');
 
     if (env.name !== 'production') {
         mainWindow.openDevTools();
